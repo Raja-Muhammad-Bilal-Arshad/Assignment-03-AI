@@ -70,7 +70,6 @@ int main()
                     cout<<"INVALID DIGIT INPUT ";
                     return 1;
                     }
-
                 }
                 else
                 {
@@ -78,9 +77,7 @@ int main()
                     return 1;
                 }
                 break;
-
-        }
-        
+        }        
         case 2:
         {
             cout<<"Enter your number: ";
@@ -144,7 +141,6 @@ int main()
                     cout<<"INVALID DIGIT INPUT ";
                     return 1;
                     }
-
                 }
                 else
                 {
@@ -152,7 +148,6 @@ int main()
                     return 1;
                 }
                 break;
-
         }
         
         default:
@@ -161,8 +156,6 @@ int main()
             return 1;
         }
     }
-
-
     cout<<result<<endl;
     system("pause");
     return 0;
