@@ -2,163 +2,26 @@
 using namespace std;
 int main()
 {
-    int a,b,c,num,rem,result;
+    int D1,D2,D3,D4,D5,S,a,n,result=0;
     cout<<"Enter your selection number(1 for binary digit and 2 for octal digit): ";
-    cin>>num;
-    switch(num)
-    {
-        case 1:
-        {
-            cout<<"Enter your number: ";
+    cin>>S;
+     cout<<"Enter your number: ";
             cin>>a;
-            if(a!=0 && a!=1)
-            {
-                if(a/10==0)
-                {
-                    cout<<"Invalid Input";
-                    return 1;
-                }
-                else if(a/100==0)
-                {
-                    cout<<"Invalid Input";
-                    return 1;
-                }
-                else if(a/1000==0)
-                {
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*1);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*2);
-                     rem=a%10;
-                     result=result+(rem*2*2);
-                }
-                else if(a/10000==0)
-                {
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*1);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*2);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*2*2);
-                     rem=a%10;
-                     result=result+(rem*2*2*2);                   
-                }
-                else if(a/100000==0)
-                {
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*1);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*2);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*2*2);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*2*2*2);
-                     rem=a%10;
-                     result=result+(rem*2*2*2*2);
-                }
-                else
-                {
-                    cout<<"INVALID DIGIT INPUT ";
-                    return 1;
-                    }
-                }
-                else
-                {
-                    cout<<"INVALID INPUT";
-                    return 1;
-                }
-                break;
-        }        
+            n=a;
+            D1=a%10; a=a/10;
+            D2=a%10; a=a/10;
+            D3=a%10; a=a/10;
+            D4=a%10; a=a/10;
+            if((n>=100 && n<=100000) && (( ((D1==1 || D1==0)&&(D2==1 || D2==0)&&(D3==1 || D3==0)&&(D4==1 || D4==0)&& (D5==1 || D5==0)) &&(S==1)) || ( ((D1>=0 && D1<8)&&(D2>=0 || D2<0)&&(D3>=0 && D3<8)&&(D4>=0 && D4<8)&& (D5>=0 && D5<8)) &&(S==2))))
+    switch(S)
+    {    case 1:
+        result=D1+D2*(2)+D3*(2*2)+D4*(2*2*2)+D5*(2*2*2*2); break;       
         case 2:
-        {
-            cout<<"Enter your number: ";
-            cin>>a;
-            if(a<8 || a>=0)
-            {
-                if(a/10==0)
-                {
-                    cout<<"Invalid Input";
-                    return 1;
-                }
-                else if(a/100==0)
-                {
-                    cout<<"Invalid Input";
-                    return 1;
-                }
-                else if(a/1000==0)
-                {
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*1);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*8);
-                     rem=a%10;
-                     result=result+(rem*8*8);
-                }
-                else if(a/10000==0)
-                {
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*1);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*8);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*8*8);
-                     rem=a%10;
-                     result=result+(rem*8*8*8);                   
-                }
-                else if(a/100000==0)
-                {
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*1);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*8);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*8*8);
-                     rem=a%10;
-                     a=a/10;
-                     result=result+(rem*8*8*8);
-                     rem=a%10;
-                     result=result+(rem*8*8*8*8);
-                }
-                else
-                {
-                    cout<<"INVALID DIGIT INPUT ";
-                    return 1;
-                    }
-                }
-                else
-                {
-                    cout<<"INVALID INPUT";
-                    return 1;
-                }
-                break;
-        }
-        
-        default:
-        {
-            cout<<"INVALID INPUT";
-            return 1;
-        }
+        result=D1+D2*(8)+D3*(8*8)+D4*(8*8*8)+D5*(8*8*8*8); break;
     }
-    cout<<result<<endl;
-    system("pause");
-    return 0;
-
+    else 
+    {cout<<"INVALID .............ERROR.............."; return 1;}
+   cout<<"The result is: "<< result<<endl;
+   system("pause");
+   return 0;
 }
-
