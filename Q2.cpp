@@ -56,5 +56,5 @@ cout<<"No tax is deducted..."<<endl;
 if(choice2=="yes")
 tax=tax-0.25 *(tax);
 cout<<"Annual income tax is "<<tax<<endl;
-cout<<"Monthly deduction after subtracting tax is "<<(anual_income-tax)/12;
+cout<<"Monthly deduction after subtracting tax is "<<(anual_income - tax)/12;
 }
