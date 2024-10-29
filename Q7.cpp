@@ -1,9 +1,10 @@
 #include<iostream>
+#include<string>
 using namespace std;
 int main()
 {
     string s;
-    int S;
+    int S,a;
 
     cout<<"Enter your 5 letters string: ";
     cin>>s;
@@ -32,8 +33,6 @@ int main()
             s[0]=s[4];
             s[1]=s[3];
             cout<<s;
-            
-
         }
         case 2:
         {
